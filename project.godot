@@ -10,12 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Apiary"
-config/description="A real-time beekeeping simulator."
-config/version="0.01"
+config/name="Beekeeping Simulator"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-boot_splash/bg_color=Color(1, 0.835294, 0.137255, 1)
+boot_splash/bg_color=Color(0.0627451, 0.643137, 0.894118, 1)
 boot_splash/image="res://assets/images/boot-splash.png"
 config/icon="res://icon.svg"
 

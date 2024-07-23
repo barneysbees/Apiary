@@ -1,3 +1,3 @@
-[gd_scene format=3 uid="uid://dmgp3e0n54ish"]
+[gd_scene format=3 uid="uid://b57gs63fj6c5y"]
 
-[node name="Node3D" type="Node3D"]
+[node name="Node2D" type="Node2D"]
