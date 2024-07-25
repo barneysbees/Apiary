@@ -1,1 +1,1 @@
-# Old Abbey Farm - A real-time Beekeeping Simulator v1.0
+# Old Abbey Farm - A real-time Beekeeping RPG v1.0
