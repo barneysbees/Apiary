@@ -1,0 +1,121 @@
+[gd_scene load_steps=9 format=3 uid="uid://dmxqs6r0c18pl"]
+
+[ext_resource type="FontFile" uid="uid://ydscqpl1l03k" path="res://assets/fonts/NESCyrillic.ttf" id="1_xjooc"]
+[ext_resource type="Script" path="res://Quit.gd" id="2_ducx2"]
+[ext_resource type="FontFile" uid="uid://cnvv0x8dfkqik" path="res://assets/fonts/Adventurer.ttf" id="3_fnt"]
+[ext_resource type="Texture2D" uid="uid://b61hge2p36iyo" path="res://assets/images/boot-splash-bg.png" id="4_img"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xuh3q"]
+bg_color = Color(0.352941, 0.705882, 0.454902, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47ytf"]
+bg_color = Color(0.164706, 0.372549, 0.341176, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_av3av"]
+bg_color = Color(0.4, 0.72549, 0.494118, 1)
+corner_detail = 1
+shadow_offset = Vector2(1, 1)
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t52vr"]
+bg_color = Color(0.164706, 0.372549, 0.341176, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BlueRectangle" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0.0627, 0.6431, 0.8941, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="New Apiary" type="Button" parent="."]
+offset_left = 643.0
+offset_top = 384.0
+offset_right = 976.0
+offset_bottom = 432.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("1_xjooc")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_xuh3q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_47ytf")
+text = "New Apiary"
+metadata/_edit_use_anchors_ = true
+
+[node name="Load Apiary" type="Button" parent="."]
+offset_left = 643.0
+offset_top = 520.0
+offset_right = 976.0
+offset_bottom = 568.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("1_xjooc")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_xuh3q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_47ytf")
+text = "Load Apiary"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 640.0
+offset_top = 658.0
+offset_right = 976.0
+offset_bottom = 706.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("1_xjooc")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_av3av")
+theme_override_styles/hover = SubResource("StyleBoxFlat_t52vr")
+text = "Quit"
+script = ExtResource("2_ducx2")
+metadata/_edit_use_anchors_ = true
+
+[node name="Boot-splash-bg" type="Sprite2D" parent="."]
+position = Vector2(-2.77203, 568)
+scale = Vector2(0.83457, 0.83457)
+texture = ExtResource("4_img")
+centered = false
+
+[node name="Logo" type="RichTextLabel" parent="."]
+offset_left = 240.0
+offset_top = 96.0
+offset_right = 1681.0
+offset_bottom = 296.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/normal_font = ExtResource("3_fnt")
+theme_override_font_sizes/normal_font_size = 200
+text = "Old Abbey Farm"
+fit_content = true
+autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Credits" type="RichTextLabel" parent="."]
+offset_left = 24.0
+offset_top = 1032.0
+offset_right = 96.0
+offset_bottom = 1064.0
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/normal_font = ExtResource("1_xjooc")
+theme_override_font_sizes/normal_font_size = 30
+text = "Barney's Bees 2024"
+fit_content = true
+autowrap_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Version Number" type="RichTextLabel" parent="."]
+offset_left = 1840.0
+offset_top = 1024.0
+offset_right = 1912.0
+offset_bottom = 1056.0
+theme_override_constants/shadow_offset_x = 6
+theme_override_constants/shadow_offset_y = 4
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/normal_font = ExtResource("1_xjooc")
+theme_override_font_sizes/normal_font_size = 30
+text = "v1.0"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

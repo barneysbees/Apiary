@@ -11,12 +11,21 @@ config_version=5
 [application]
 
 config/name="Beekeeping Simulator"
-run/main_scene="res://main.tscn"
+run/main_scene="res://welcome.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/bg_color=Color(0.0627451, 0.643137, 0.894118, 1)
+boot_splash/show_image=false
 boot_splash/image="res://assets/images/boot-splash.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
 config/icon="res://icon.svg"
+text_editor/behavior/files/auto_reload_scripts_on_external_change=true
 
 [display]
 
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
 window/size/resizable=false
+window/size/borderless=true
+window/stretch/mode="viewport"
